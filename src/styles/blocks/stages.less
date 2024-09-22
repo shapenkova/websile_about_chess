@@ -1,0 +1,27 @@
+.stages {
+    box-sizing: border-box;
+    display: flex;
+    &__container {
+        .container();
+        display: flex;
+        flex-direction: column;
+    }
+    &__wrapper {
+        position: relative;
+        box-sizing: border-box;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    &__wrapper-el {
+        box-shadow: 5px 4px 13px 0 rgba(0, 0, 0, 0.25);
+        background-color: @color3;
+        background-image:url(../assets/images/img-bg.png);
+        opacity: 0.8;
+    }
+    &__picture {
+        position: absolute;
+        width: 100%;
+    }
+}

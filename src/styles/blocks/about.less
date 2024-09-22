@@ -15,6 +15,9 @@
     &__table-desc {
         width: 100%;
         max-width: 704px;
+        margin: 0;
+        padding-top: 15px;
+        padding-bottom: 10px;
         color: @color1;
         font-family: @font3;
         font-size: 36px;
@@ -56,13 +59,10 @@
         height: 100%;
         object-fit: cover;
     }
-    &__table {
-        padding-top: 5px;
-    }
     &__table-link {
         box-sizing: border-box;
         display: inline-block;
-        padding-top: 20px;
+        padding-top: 48px;
         color: @color5;
         font-family: @font2;
         font-size: 20px;
@@ -111,16 +111,13 @@
     &__td {
         box-sizing: border-box;
         height: 54px;
-        padding: 16px 0 16px 0;
+        padding: 16px 0;
         border-right: 1px solid @color4;
         color: @color1;
         font-family: @font2;
         font-size: 20px;
         font-weight: @font_weight4;
         line-height: 1.2;
-        &:first-child {
-            height: 39px;
-        }
         &:last-child {
             border-right: none;
         }
@@ -140,6 +137,7 @@
     }
     &__old-price {
         position: relative;
+        margin-right: 15px;
         &::after {
             content: '';
             position: absolute;
@@ -154,5 +152,8 @@
 }
 .td--size {
     height: 39px;
-    padding: 5px 0 16px 0;
+    padding: 0 0 15px;
+}
+.td--size1 {
+    padding: 16px 0 0;
 }
