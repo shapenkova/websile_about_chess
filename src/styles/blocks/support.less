@@ -1,0 +1,51 @@
+.support {
+    box-sizing: border-box;
+    display: flex;
+    &__container {
+        .container();
+    }
+    &__link {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 64px;
+        margin-top: 81px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    &__link-text {
+        width: 100%;
+        max-width: 764px;
+        margin: 0;
+        padding-top: 3px;
+        color: @color1;
+        font-family: @font3;
+        font-size: 36px;
+        font-weight: @font_weight2;
+        line-height: 1.35;
+        text-transform: uppercase;
+    }
+    &__textRed {
+        color: @red;
+        font-weight: @font_weight5;
+    }
+    &__picture {
+        position: relative;
+        width: 394px;
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 63.45%;
+        }
+    }
+    &__picture-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: ellipse(50% 50% at 50% 50%);
+    }
+}
