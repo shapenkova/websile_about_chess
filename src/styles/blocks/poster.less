@@ -1,5 +1,4 @@
 .poster {
-    //z-index: -100;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -7,21 +6,26 @@
     margin: 0 auto;
     &__container {
         position: relative;
-        //z-index: -1000;
         box-sizing: border-box;
         display: flex;
+        align-items: center;
         width: 100%;
         margin: 0 auto;
     }
 
     &__box1 {
-        //position: absolute;
+        position: relative;
         width: 100%;
         overflow: hidden;
     }
     &__picture {
         position: relative;
+        display: block;
         width: 100%;
+        @media @bw1660 {
+            //width: 71.1%;
+            width: 101%;
+        }
         &::before {
             content: '';
             display: block;
@@ -30,9 +34,6 @@
             @media @bw1660 {
                 padding-top: 51.3%;
             }
-        }
-        @media @bw1660 {
-            width: 71.1%;
         }
     }
     &__picture-img {
@@ -44,18 +45,22 @@
     }
 
     &__box2 {
-        z-index: 10;
+        .container();
         position: absolute;
         top: 124px;
-        left: 72px;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    &__block {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         width: 100%;
         max-width: 542px;
-
     }
-
     &__text {
         position: relative;
         margin: 0;
