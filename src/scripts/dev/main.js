@@ -71,3 +71,14 @@ carousel.addEventListener('mouseleave', startAutoScroll);
 // Инициализация показа первых трех слайдов и установки пагинации
 showSlides(currentSlideIndex);
 startAutoScroll();
+
+
+document.addEventListener('scroll', function() {
+    var headerLink = document.querySelector('.page-header');
+    
+    if (window.scrollY > 50) { // Замените 50 на нужное значение
+        headerLink.classList.add('scrolled');
+    } else {
+        headerLink.classList.remove('scrolled');
+    }
+});

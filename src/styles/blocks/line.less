@@ -10,6 +10,10 @@
     margin-top: -1px;
     background-color: @red;
     overflow: hidden;
+
+    @media @bw768 {
+        height: 38px;
+    }
     &__container {
         display: flex;
         align-items: center;
@@ -28,6 +32,10 @@
         line-height: 1.1;
         text-transform: uppercase;
         white-space: nowrap;
+
+        @media @bw768 {
+            font-size: 16px;
+        }
     }
     &__item-icon {
         margin-bottom: 6px;

@@ -21,24 +21,13 @@
         display: block;
         width: 100%;
         height: 100%;
-        background-color: fade(@white, 0%);
+        background-color: transparent;
     }
     &__container {
         .container();
         display: flex;
         align-items: center;
         align-self: flex-end;
-        // position: relative;
-        // z-index: 100;
-        // box-sizing: border-box;
-        // display: flex;
-        // align-items: center;
-        // align-self: flex-end;
-        // width: 100%;
-        // max-width: 1366px;
-        // margin: 0 auto;
-        // padding-left: 74px;
-        // padding-right: 74px;
     }
     &__logo-link {
         flex-shrink: 0;
@@ -68,4 +57,10 @@
         line-height: 1.125;
         text-transform: uppercase;
     }
+}
+
+.page-header.scrolled {
+    background-color: @color3;
+    transition: background-color 0.3s;
+    opacity: 0.9;
 }

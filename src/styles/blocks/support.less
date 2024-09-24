@@ -9,6 +9,10 @@
         margin: 0 auto;
         padding-left: 72px;
         padding-right: 57px;
+        @media @bw768 {
+            padding-left: 18px;
+            padding-right: 20px;
+        }
     }
     &__link {
         box-sizing: border-box;
@@ -19,11 +23,16 @@
         margin-top: 81px;
         text-decoration: none;
         cursor: pointer;
+        @media @bw1340 {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
-    &__link-text {
+    &__link-text,
+    &__link-text2 {
         width: 100%;
         max-width: 764px;
-        margin: 0;
+        margin: 0 auto;
         padding-top: 3px;
         color: @color1;
         font-family: @font3;
@@ -31,6 +40,24 @@
         font-weight: @font_weight2;
         line-height: 1.35;
         text-transform: uppercase;
+        @media @bw1340 {
+            max-width: 100%;
+        }
+        @media @bw650 {
+            font-size: 28px;
+        }
+    }
+    &__link-text2 {
+        display: none;
+        @media @bw1340 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &__text-none {
+        @media @bw1340 {
+            display: none;
+        }
     }
     &__textRed {
         color: @red;
