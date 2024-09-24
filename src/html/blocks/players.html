@@ -3,8 +3,23 @@
         <h2 class="players__title">
             Участники турнира
         </h2>
+        
         <div class="players__carousel carousel">
-            
+            <div class="carousel__btns" id="pagination">
+                <button type="button" class="carousel__arrow-prev arrow arrow--left">
+                    <svg class="arrow__icon" width="12" height="20">
+                        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
+                </button>
+                <div id="pagination"><span class="current-slide">1</span> / <span class="total-slides">6</span>
+                </div>
+                <button type="button" class="carousel__arrow-next arrow">
+                    <svg class="arrow__icon" width="12" height="20">
+                        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
+                </button>
+            </div>
+
             <div class="carousel__wrapper" id="js-carousel">
                 <article class="carousel__article-card article-card">
                     <a href="#" class="article-card__link">
@@ -182,7 +197,6 @@
                 </article>
             </div>
 
-            <div class="carousel__pagination"></div>
         </div>
         
 
