@@ -23,9 +23,10 @@
         margin-top: 81px;
         text-decoration: none;
         cursor: pointer;
-        @media @bw1340 {
+        @media @bw1020 {
             flex-wrap: wrap;
             justify-content: center;
+            gap: 23px;
         }
     }
     &__link-text,
@@ -40,22 +41,23 @@
         font-weight: @font_weight2;
         line-height: 1.35;
         text-transform: uppercase;
-        @media @bw1340 {
+        @media @bw1020 {
             max-width: 100%;
         }
-        @media @bw650 {
+        @media @bw768 {
+            //max-width: 336px;
             font-size: 28px;
         }
     }
     &__link-text2 {
         display: none;
-        @media @bw1340 {
+        @media @bw1020 {
             display: flex;
             flex-wrap: wrap;
         }
     }
     &__text-none {
-        @media @bw1340 {
+        @media @bw1020 {
             display: none;
         }
     }
@@ -71,6 +73,13 @@
             display: block;
             width: 100%;
             padding-top: 63.45%;
+            @media @bw768 {
+                padding-top: 63.28%;
+            }
+        }
+
+        @media @bw1020 {
+            width: 335px;
         }
     }
     &__picture-img {

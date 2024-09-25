@@ -10,6 +10,11 @@
     width: 100%;
     height: 64px;
     transition: box-shadow 0.2s;
+
+    @media @bw768 {
+        height: 50px;
+    }
+    
     &:hover {
         box-shadow: 0 0 50px 0 @shadow;
     }
@@ -42,6 +47,10 @@
         color: @body-color0;
         text-decoration: none;
         cursor: pointer;
+        @media @bw768 {
+            width: 213px;
+            height: 32px;
+        }
     }
     &__logo-icon {
         width: 100%;
@@ -56,6 +65,11 @@
         font-weight: @font_weight5;
         line-height: 1.125;
         text-transform: uppercase;
+        @media @bw768 {
+            width: 128px;
+            margin: 0 0 0 5px;
+            font-size: 14px;
+        }
     }
 }
 
