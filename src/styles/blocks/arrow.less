@@ -1,0 +1,36 @@
+.arrow {
+    width: 44px;
+    height: 44px;
+    padding: 12px 19px 13px 16px;
+    border: none;
+    background-color: @color1;
+    border-radius: 100%;
+    color: @white;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    &:hover {
+        background-color: @yellow;
+    }
+    &__icon {
+        width: 12px;
+        height: 20px;
+        @media @bw1340 {
+            width: 10px;
+            height: 18px;
+        }
+    }
+
+    @media @bw1340 {
+        width: 36px;
+        height: 36px;
+        padding: 9px 13px 11px 16px;
+    }
+}
+.arrow--disabled {
+    background-color: @disabled;
+    pointer-events: none;
+}
+.arrow--left {
+    transform: rotate(180deg);
+}

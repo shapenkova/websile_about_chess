@@ -94,6 +94,10 @@
         font-weight: @font_weight4;
         line-height: 1.2;
     }
+    &__container-slider {
+        position: relative;
+        box-sizing: border-box;
+    }
     &__wrapper {
         position: relative;
         box-sizing: border-box;
@@ -133,13 +137,14 @@
             gap: 30px;
             position: relative;
             overflow: hidden;
-            display: flex;
             width: 100%;
             max-width: 335px;
             padding: 62px 20px 35px 22px;
             box-shadow: 5px 4px 13px 0 @shadow2;
-            background-image:url(../assets/images/bg-link.png);
-           // opacity: 0.8;
+            //background-image:url(../assets/images/bg-link.png);
+            background-image: url('../assets/images/bg-slide.png');
+            background-size: cover;
+            //opacity: 0.8;
         }
     }
     &__block2 {
@@ -157,7 +162,10 @@
             padding: 20px 20px 20px 22px;
             box-shadow: 5px 4px 13px 0 @shadow2;
             background-image:url(../assets/images/img-bg.png);
-            opacity: 0.8;
+            // mix-blend-mode: color-burn; 
+            
+            // opacity: 0.8;
+
         }
     }
     &__text-pad {
@@ -209,15 +217,18 @@
     &__background-image1 {
         display: none;
         @media @bw1020 {
+            display: flex;
+            display: flex;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../assets/images/image.png');
+            background-image: url('../assets/images/bg-link.png');
             background-size: cover;
             background-position: center; 
-            mix-blend-mode: color-burn; 
+            opacity: 0.9;
+            // mix-blend-mode: color-burn; 
         }
     }
 
@@ -286,7 +297,14 @@
     &__btns {
         display: none;
         @media @bw1020 {
+            position: absolute;
+            left: 50%;
+            bottom: -70px;
+            transform: translateX(-50%);
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 178px;
         }
     }
     &__pic {
@@ -316,9 +334,30 @@
         height: 100%;
         object-fit: cover;
     }
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 74px;
+
+    }
+    &__pagination-btn {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        border: none;
+        background-color: @disabled;
+    }
 }
 .active {
     @media @bw1020 {
         display: none;
     }
+}
+.disabled {
+    background-color: @disabled;
+    color: @white;
+}
+.active-btn {
+    background-color: @color1;
 }

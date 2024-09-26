@@ -1,7 +1,11 @@
 .players {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     margin: 200px 0 140px;
+    @media @bw1020 {
+        margin: 160px 0 140px;
+    }
     
     &__container {
         box-sizing: border-box;
@@ -12,6 +16,10 @@
         margin: 0 auto;
         padding-left: 72px;
         padding-right: 72px;
+        @media @bw1020 {
+            padding-left: 19px;
+            padding-right: 20px;
+        }
     }
     &__title {
         margin: 0;
@@ -21,11 +29,9 @@
         font-weight: @font_weight2;
         line-height: 1.2;
         text-transform: uppercase;
-    }
-    &__carousel {
-        display: flex;
-        width: 100%;
-        margin-top: 60px;
+        @media @bw1020 {
+            font-size: 36px;
+        }
     }
 }
 .article-card {
@@ -35,7 +41,6 @@
     align-items: center;
     width: 100%;
     max-width: 394px;
-    //min-width: 335px;
     padding: 0 37px;
     @media @bw1340 {
         margin: 0 auto;
@@ -63,6 +68,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         margin-top: 30px;
     }
     &__btn-link {
@@ -104,6 +110,11 @@
         text-decoration: none;
         cursor: pointer;
         overflow: hidden;
+
+        @media @bw1340{
+            width: 244px;
+            height: 244px;
+        }
     }
     &__bg-img {
         position: absolute;
@@ -146,6 +157,11 @@
     box-sizing: border-box;
     display: flex;
     width: 100%;
+    margin-top: 60px;
+    @media @bw1020 {
+        margin-top: 37px;
+        margin-left: 7px;
+    }
 
     &__btns {
         position: absolute;
@@ -156,7 +172,18 @@
         align-items: center;
         justify-content: space-between;
         width: 151px;
-
+        height: 44px;
+        @media @bw1340 {
+            top: auto;
+            // top: 50.5vh;
+            //top: 26.5vh;
+            left: 50%; /* Сдвигаем на центр по горизонтали */
+            bottom: -70px; /* Прижимаем к низу контейнера */
+            transform: translateX(-50%); /* Центруем элемент по горизонтали */
+            right: 0;
+            width: 129px;
+            height: 36px;
+        }
     }
     &__pagination {
         display: flex;
@@ -169,6 +196,9 @@
         font-size: 16px;
         font-weight: @font_weight2;
         line-height: 1.2;
+        @media @bw1340 {
+            width: 29px;
+        }
     }
     &__wrapper {
         display: flex;
@@ -177,38 +207,16 @@
         //margin: 0 20px -40px;
         overflow: hidden;
         // transition: transform 0.5s ease-in-out;
+
+        @media @bw1340 {
+            margin: 0 auto;
+        }
     }
     // &__article-card {
     //     // width: calc(33.3333% - 20px);
     //     // margin: 0 20px 40px;
         
     // }
-}
-.arrow {
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: none;
-    background-color: @color1;
-    border-radius: 100%;
-    color: @white;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    cursor: pointer;
-    &:hover {
-        background-color: @yellow;
-    }
-    &__icon {
-        width: 12px;
-        height: 20px;
-    }
-}
-.arrow--disabled {
-    color: @disabled;
-    pointer-events: none;
-}
-.arrow--left {
-    transform: rotate(180deg);
 }
 .hidden {
     display: none;
