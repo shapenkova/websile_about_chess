@@ -29,10 +29,19 @@
         background-color: transparent;
     }
     &__container {
-        .container();
+        box-sizing: border-box;
         display: flex;
         align-items: center;
         align-self: flex-end;
+        width: 100%;
+        max-width: 1414px;
+        margin: 0 auto;
+        padding-left: 72px;
+        padding-right: 72px;
+        @media @bw768 {
+            padding-left: 11px;
+            padding-right: 20px;
+        }
     }
     &__logo-link {
         flex-shrink: 0;

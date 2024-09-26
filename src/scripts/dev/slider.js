@@ -36,12 +36,10 @@ function updatePaginationState() {
 }
 
 btnNext.onclick = function () {
-    console.log('Next Slide');
     showNextSlide('next');
 };
 
 btnPrev.onclick = function () {
-    console.log('Prev Slide');
     showNextSlide('prev');
 };
 

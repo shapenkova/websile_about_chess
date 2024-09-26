@@ -11,11 +11,8 @@
         display: flex;
         align-items: center;
         width: 100%;
-        height: 700px;
-        background-color: @color3;
         overflow: hidden;
-        margin: 0 auto;
-        @media @bw1020 {
+        @media @bw1340 {
             height: 775px;
         }
     }
@@ -34,33 +31,20 @@
         background-position: center;
     }
     &__box1 {
-        position: absolute;
-        left: 50%;
-        top: -41px;
-        right: 20px;
-        width: 660px;
-        height: 660px;
-        border-radius: 50%;
-        background-color: @yellow;
-        color:@color3;
-        
+        width: 100%;
         overflow: hidden;
-    }
-    &__box1-icon {
-        position: absolute;
-        bottom: -36px;
-        right: -60px;
-        width: 778px;
-        height: 678px;
     }
     &__picture {
         position: relative;
         display: block;
         width: 100%;
         @media @bw1660 {
-            //width: 71.1%;
             width: 101%;
         }
+        @media @bw1020 {
+            width: 100%;
+        }
+
         &::before {
             content: '';
             display: block;
@@ -68,6 +52,12 @@
             padding-top: 36.45%;
             @media @bw1660 {
                 padding-top: 51.3%;
+            }
+            @media @bw1340 {
+                padding-top: 75%;
+            }
+            @media @bw1020 {
+                padding-top: 233%;
             }
         }
     }
@@ -85,30 +75,23 @@
         top: 124px;
         left: 0;
         right: 0;
+        width: 100%;
+        max-width: 1414px;
+        margin: 0 auto;
+        padding-left: 72px;
+        padding-right: 72px;
         z-index: 10000;
         box-sizing: border-box;
         display: flex;
         @media @bw1020 {
-            top: auto;
+            top: 91px;
             bottom: 50px;
         }
+        @media @bw768 {
+            padding-left: 18px;
+            padding-right: 9px;
+        }
     }
-    &__box3 {
-        position: absolute;
-        bottom: 0;
-        z-index: 10;
-
-    }
-    // &__box3-pic {
-        
-    // } 
-
-    &__box4 {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-    
     &__block {
         box-sizing: border-box;
         display: flex;
@@ -137,9 +120,15 @@
     }
     &__row2 {
         text-align: center;
+        @media @bw1020 {
+            padding-left: 10px;
+        }
     }
     &__row3 {
         text-align: right;
+        @media @bw1020 {
+            padding-left: 10px;
+        }
     }
 
     &__desc {
@@ -168,6 +157,7 @@
         @media @bw1020 {
             flex-direction: column;
             gap: 14px;
+            margin-top: 32px;
         }
     }
     &__btn-link {
